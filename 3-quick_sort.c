@@ -45,8 +45,7 @@ static int lomuto_partition(int *array, int low, int high, size_t size)
 		}
 	}
 
-	/* Final pivot swap (always printed if it happens) */
-	if (i != high)
+	if (i != high && array[i] != array[high])
 	{
 		swap_ints(&array[i], &array[high]);
 		print_array(array, size);
